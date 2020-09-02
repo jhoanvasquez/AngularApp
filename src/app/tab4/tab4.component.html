@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 4 works!!!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-container>
+  <h1>Resultado API</h1>
+
+  <table class="table">
+  <thead>
+    <th>#</th>
+    <th>Id agenda</th>
+    <th>Id espacio</th>
+    <th>Id trabajo</th>
+    <th>Hora Inicio</th>
+    <th>Hora Fin</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let date of data; index as i">
+      <td>{{i+1}}</td>
+      <td>{{date.id_trabajo_agenda}}</td>
+      <td>{{date.id_espacio}}</td>
+      <td>{{date.id_trabajo}}</td>
+      <td>{{date.hora_inicio}}</td>
+      <td>{{date.hora_fin}}</td>
+
+    </tr>
+  </tbody>
+  </table>
+
+</app-container>
+
+</ion-content>

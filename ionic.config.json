@@ -1,7 +1,8 @@
 {
   "name": "appIonic",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
