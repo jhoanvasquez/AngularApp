@@ -20,7 +20,8 @@ export class Tab4Component implements OnInit {
 
   response(){
     this.json.getJson('https://invessoft.com/api/eventos/1').subscribe((response: any) =>{
-    this.data = response.agenda;
+    this.data = response;
+
     
   })
 }

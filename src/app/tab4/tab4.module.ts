@@ -10,7 +10,7 @@ import { Tab4Routing } from './tab4-routing.module';
 
 
 @NgModule({
-  declarations: [Tab4Component],
+  
   imports: [
     IonicModule,
     CommonModule,
@@ -18,8 +18,11 @@ import { Tab4Routing } from './tab4-routing.module';
     HttpClientModule,
     ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: Tab4Component }]),
-    Tab4Routing
+    Tab4Routing,
     
-  ]
+
+  ],
+
+  declarations: [Tab4Component]
 })
 export class Tab4Module { }

@@ -13,7 +13,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-container>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <h1>Resultado API</h1>
 
   <table class="table">
@@ -21,24 +21,31 @@
     <th>#</th>
     <th>Id agenda</th>
     <th>Id espacio</th>
+    <th>Id campus</th>
     <th>Id trabajo</th>
+    <th>Descripcion</th>
+    <th>Campus</th>
     <th>Hora Inicio</th>
     <th>Hora Fin</th>
+    
   </thead>
 
   <tbody>
-    <tr *ngFor="let date of data; index as i">
+    <tr *ngFor="let date of data.agenda| slice:0:10; index as i">
       <td>{{i+1}}</td>
       <td>{{date.id_trabajo_agenda}}</td>
       <td>{{date.id_espacio}}</td>
+      <td>{{date.espacio.id_campus}}</td>
       <td>{{date.id_trabajo}}</td>
+      <td>{{date.espacio.descripcion}}</td>
+      <td>{{date.espacio.campus.nombre_campus}}</td>
       <td>{{date.hora_inicio}}</td>
       <td>{{date.hora_fin}}</td>
+      
 
     </tr>
   </tbody>
   </table>
 
-</app-container>
 
 </ion-content>

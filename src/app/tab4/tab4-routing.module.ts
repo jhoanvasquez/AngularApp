@@ -3,11 +3,9 @@ import { Tab4Component } from './tab4.component';
 import { RouterModule, Routes } from '@angular/router';
 
 
-
-
 const routes: Routes = [
-  {path: '', redirectTo: 'view', pathMatch: 'full'},
-  {path: 'view', component: Tab4Component},
+  {path: '',
+  component: Tab4Component,}
   
 ];
 
